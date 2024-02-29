@@ -1,0 +1,24 @@
+.border-bottom{
+    border: 2px solid black;
+    width: 70px;
+}
+
+.weather-wrapper {
+    margin-top: 50px;
+    // border: 2px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.weather-wrapper .weather-temp{
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.divider {
+    margin-top: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}

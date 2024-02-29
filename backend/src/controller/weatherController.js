@@ -14,8 +14,8 @@ class WeatherController {
             if (weatherStatus.erro !== undefined){
                 const error = new Error(weatherStatus.erro.message);
                 error.code = weatherStatus.erro.cod;
-                throw error;  
-            } 
+                throw error;
+            }
             return res.status(200).json(weatherStatus);
             
         } catch (error) {
@@ -24,6 +24,7 @@ class WeatherController {
     }
 
 }
+
 
 
 module.exports = WeatherController;
