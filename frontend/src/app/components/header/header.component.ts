@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CircleHeatComponent } from '../../icons/circle-heat/circle-heat.component';
 
 @Component({
@@ -10,6 +10,5 @@ import { CircleHeatComponent } from '../../icons/circle-heat/circle-heat.compone
 })
 export class HeaderComponent {
 
-  city = "Fortaleza";
-
+  @Input() city: string = '';
 }
