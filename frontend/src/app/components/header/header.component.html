@@ -1,4 +1,9 @@
 <header>
-    <h1 class="city">{{city}} <i class="bi bi-arrow-left-right"></i> </h1>
+    <h1 class="city">{{city}} <i (click)="showForm = !showForm" *ngIf="!showForm" class="icon-choice bi bi-arrow-left-right"></i> </h1>
+    <div class="form" *ngIf="showForm">
+        <input type="text" name="cityChoose" class="cityForm" id="cityChoose" #cityChoose placeholder="Choose another city">
+        <button type="button" class="submitButton" (click)="changeCity(cityChoose.value)">Change <i class="bi bi-arrow-left-right"></i></button>
+        <button type="button" class="clearButton" (click)="showForm = !showForm">Clear</button>
+    </div>
     <i class="bi bi-cloud circle-heat"></i>
 </header>

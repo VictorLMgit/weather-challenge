@@ -40,4 +40,16 @@ export class AppComponent {
       this.weather_description = data.weather[0].description
     })
   }
+
+  fetchDataByCity(city: string){
+    this.httpClient
+    .get('http://localhost:3030/api/forecast?city='+city)
+    .subscribe((data: any) => {
+        console.log(data);
+      this.city = data.name;
+      this.weather = data.main.temp;
+      this.feels_like = data.main.feels_like;
+      this.weather_description = data.weather[0].description
+    })
+  }
 }
